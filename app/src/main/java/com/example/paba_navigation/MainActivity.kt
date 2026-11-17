@@ -35,8 +35,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
 
-        setContentView(R.layout.activity_main)
-
         ViewCompat.setOnApplyWindowInsetsListener(binding!!.toolbar) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             val params = v.layoutParams as ViewGroup.MarginLayoutParams
@@ -60,8 +58,8 @@ class MainActivity : AppCompatActivity() {
         binding!!.navView.setupWithNavController(navController)
 
         appBarConfiguration = AppBarConfiguration(
-            navGraph = navController.graph,
-            drawerLayout = binding!!.drawer
+            setOf(R.id.homeFragment, R.id.profileFragment, R.id.settingFragment),
+            binding!!.drawer
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
