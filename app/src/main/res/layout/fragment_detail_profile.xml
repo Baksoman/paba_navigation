@@ -30,4 +30,14 @@
         app:layout_constraintStart_toStartOf="@+id/tvDetail"
         app:layout_constraintTop_toBottomOf="@+id/tvDetail" />
 
+    <TextView
+        android:id="@+id/tvParamSafeArgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/tvParam"
+        app:layout_constraintStart_toStartOf="@+id/tvParam"
+        app:layout_constraintTop_toBottomOf="@+id/tvParam" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

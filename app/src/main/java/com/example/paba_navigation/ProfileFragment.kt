@@ -13,7 +13,6 @@ import com.example.paba_navigation.databinding.FragmentProfileBinding
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-private var binding: FragmentProfileBinding? = null
 
 /**
  * A simple [Fragment] subclass.
@@ -24,6 +23,8 @@ class ProfileFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    private var binding: FragmentProfileBinding? = null
 
     override fun onDestroy() {
         super.onDestroy()
@@ -60,6 +61,12 @@ class ProfileFragment : Fragment() {
                 R.id.action_profileFragment_to_detailProfileFragment,
                 mBundle
             )
+        }
+        binding!!.buttonOpenSafe.setOnClickListener {
+            val action = ProfileFragmentDirections.actionProfileFragmentToDetailProfileFragment(
+                dataSatu = "a@gmail.com"
+            )
+            findNavController().navigate(action)
         }
     }
 

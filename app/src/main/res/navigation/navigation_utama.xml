@@ -33,5 +33,10 @@
         android:id="@+id/detailProfileFragment"
         android:name="com.example.paba_navigation.DetailProfileFragment"
         android:label="fragment_detail_profile"
-        tools:layout="@layout/fragment_detail_profile" />
+        tools:layout="@layout/fragment_detail_profile" >
+        <argument
+            android:name="dataSatu"
+            app:argType="string"
+            android:defaultValue="-" />
+    </fragment>
 </navigation>
